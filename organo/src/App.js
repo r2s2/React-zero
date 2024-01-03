@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Banner from './componentes/Banner/Banner';
+import Banner from './componentes/Banner';
+import CampoTexto from './componentes/CampoTexto';
 
 
 
@@ -8,16 +9,14 @@ function App() {
   return (
     <div className="App">
       <Banner />
+      <CampoTexto label="Nome"/>
+      <CampoTexto label="Cargo"/>
+      <CampoTexto label="Imagem"/>
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         
-        <p>
-         
-          bem vindo né
-          <br/>
-          <br/>
-          já incluindo isso aqui
-        </p>
+       
         <a
           className="App-link"
           href="https://reactjs.org"
