@@ -6,7 +6,7 @@ import logo from '../../logo.svg';
 import { useState } from 'react';
 
 
-const Formulario = () => {
+const Formulario = (props) => {
 
 
     const times = [
@@ -26,7 +26,13 @@ const Formulario = () => {
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
-        console.log("Form foi submetido => ", nome, cargo, imagem, time)
+        
+        props.aoColaboradorCadastrado({
+            nome,
+            cargo,
+            imagem, 
+            time
+        })
     }
 
     return (
