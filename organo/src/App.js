@@ -4,6 +4,8 @@ import './App.css';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time'
+import Colaborador from './componentes/Colaborador';
+
 
 
 
@@ -55,7 +57,7 @@ function App() {
   const [colaboradores, setColaboradores] = useState([])
   const aoNovoColaboradorAdicionado = (colaborador) => {
     console.log(colaborador)
-    setColaboradores(...colaboradores, colaborador)
+    setColaboradores([...colaboradores, colaborador])
 
   }
 
@@ -69,10 +71,14 @@ function App() {
         aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}
       />
       {
-      times.map(time => <Time key={time.nome}
+      times.map(time => <Time 
+        key={time.nome}
         nome={time.nome}
         corPrimaria={time.corPrimaria}
-        corSecundaria={time.corSecundaria} />)
+        corSecundaria={time.corSecundaria}
+        colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome )} 
+        
+        />)
         }
 
 
