@@ -1,4 +1,5 @@
 import './Time.css'
+import Colaborador from '../Colaborador'
 
 const Time = (props) => {
     const css1 = { borderColor: props.corPrimaria }
@@ -10,6 +11,9 @@ const Time = (props) => {
             <h3 style={css1}>
                 {props.nome}
             </h3>
+
+            <Colaborador />
+            <Colaborador />
         </section>
     )
 }
