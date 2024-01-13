@@ -25,6 +25,18 @@ const Formulario = (props) => {
             imagem, 
             time
         })
+
+        /* 
+Após o cadastro do colaborador, essas funções resetam os
+ campos do formulário, limpando o estado dos campos nome,
+  cargo e imagem para que eles estejam prontos para o próximo
+  cadastro.
+*/
+
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (

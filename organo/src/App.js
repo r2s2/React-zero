@@ -4,7 +4,7 @@ import './App.css';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time'
-import Colaborador from './componentes/Colaborador';
+import Rodape from './componentes/Rodape';
 
 
 
@@ -81,20 +81,8 @@ function App() {
         />)
         }
 
+      <Rodape />
 
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
 }

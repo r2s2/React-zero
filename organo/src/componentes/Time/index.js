@@ -7,6 +7,7 @@ const Time = (props) => {
     
 
     return (
+        (props.colaboradores.length > 0) && /* pode usar o ternário, em vez de && coloca ?, e depois do fim da section coloca :'' */
         <section className="time" style={css2}>
             <h3 style={css1}>
                 {props.nome}
